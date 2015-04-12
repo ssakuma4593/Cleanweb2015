@@ -1,14 +1,16 @@
 <template name="categories">
   <ul>
     {{#each categories}}
+      <div class="category">
       {{> category}}
+      </div>
     {{/each}}
   </ul>
 </template>
 
 <template name="category">
   <li><img src="/images/{{id}}.jpg" alt="{{description}}"></li>
-  <div>
+  <div class="offers">
     <ul>
       {{#each offers}}
         {{> offer }}
@@ -20,7 +22,7 @@
 <template name="offer">
   <li>
     <div><img src="/images/{{id}}.jpg" alt="{{description}}"></div>
-    <div>
+    <div class="retailers">
       <ul>
         {{#each retailers}}
           {{> retailer}}
