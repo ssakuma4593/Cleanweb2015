@@ -1,0 +1,42 @@
+<template name="categories">
+  <ul>
+    {{#each categories}}
+      {{> category}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="category">
+  <li><img src="/images/{{id}}.jpg" alt="{{description}}"></li>
+  <div>
+    <ul>
+      {{#each offers}}
+        {{> offer }}
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="offer">
+  <li>
+    <div><img src="/images/{{id}}.jpg" alt="{{description}}"></div>
+    <div>
+      <ul>
+        {{#each retailers}}
+          {{> retailer}}
+        {{/each}}
+      </ul>
+    </div>
+  </li>
+
+</template>
+
+<template name="retailer">
+  <li>
+    <div>{{name}}</div>
+    <div>
+      <div>{{name}}</div>
+      <div>{{label}}: {{value}}</div>
+    </div>
+  </li>
+</template>
